@@ -1,0 +1,16 @@
+name: Multi Command Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name : Multi command
+        run: |
+          echo "Start Workflow"
+          pwd
+          ls -la
+          echo "End Workflow"
+
