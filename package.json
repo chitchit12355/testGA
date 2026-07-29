@@ -1,0 +1,12 @@
+{
+  "name": "github-actions-node-lab",
+  "version": "1.0.0",
+  "description": "Learning GitHub Actions CI with Node.js",
+  "main": "src/math.js",
+  "scripts": {
+    "test": "node test/math.test.js",
+    "build": "node build.js"
+  },
+  "author": "",
+  "license": "MIT"
+}
