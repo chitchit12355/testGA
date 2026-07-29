@@ -1,0 +1,27 @@
+name : Basic Workflow Practice
+
+on:
+  push:
+  workflow_dispatch:
+  
+jobs:
+  practice:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print welcome message
+        run: echo "This is my practice work"
+
+      - name: Print current date
+        run: date
+
+      - name: Print runner OS information
+        run: uname -a
+
+   
+
+ 
+ 
+
+
+
