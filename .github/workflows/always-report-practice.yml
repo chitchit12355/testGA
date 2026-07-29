@@ -1,0 +1,25 @@
+name: Always Report Practice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Run failing test
+        run: |
+          echo "Running tests..."
+          exit 1
+
+  report:
+    needs: test
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Generate report
+        run: |
+          echo "This report runs even if test failed"
+          echo "Test job result was: ${{ needs.test.result }}"
